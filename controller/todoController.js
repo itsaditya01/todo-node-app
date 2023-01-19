@@ -7,7 +7,6 @@ module.exports = function (app) {
   app.post("/todo", urlencodedParser, (req, res) => {
     data.push(req.body);
     res.set("content-type", "application/json");
-    console.log(req.body);
     res.json(data);
   });
 
